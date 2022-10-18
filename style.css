@@ -24,10 +24,11 @@ img.bo{
       }
  
 img.to{
-         width: 80px;
+         width: 125px;
          border-radius: 50px;
          float: left;
          margin-right: 10px;
+         height: 55px;
         
        }
 *{
