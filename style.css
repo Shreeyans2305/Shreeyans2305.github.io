@@ -82,11 +82,10 @@ div.absolute {
 }
 img.center {
 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  height: 811px;
-  bottom: 10px;
+  width: 400px;
+  height: 400px;
+  bottom: 100px;
+  left: 20px;
+  right: 50px;
 
 }
