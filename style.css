@@ -1,91 +1,20 @@
-body{background-color: #131435;}
-h1   {color: rgb(255, 255, 255);}
-h2    {color: rgb(20, 11, 11);}
-h3 {color: rgb(255, 255, 255);}
-h2.Socials{
-        left: 600px;
-        color: rgb(255, 255, 255);
-        border-color: black;
-       }
-h3    {color: rgb(255, 255, 255);}
-pre    {color: rgb(255, 255, 255);}
-img.yo{
-         width: 100px;
-         border-radius: 50px;
-         float: left;
-         margin-right: 10px;
-       }
-img.bo{
-        width: 80px;
-        float: left;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-      }
- 
-img.to{
-         width: 125px;
-         border-radius: 50px;
-         float: left;
-         margin-right: 10px;
-         height: 55px;
-        
-       }
 *{
-  margin:0px;
-  padding:0px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
   box-sizing: border-box;
 }
-nav{
-  width:100%;
-  height: 75px;
-  line-height: 75px;
-  padding: 0px 100px;
-  position: fixed;
-  background-image: linear-gradient(#df4298,#4bf0e7);
-}
-nav.logo p{
-  font-size: 30px;
-  font-weight: bold;
-  float:left;
-  color:white;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-}
-nav ul{
-  float:right;
 
-}
-nav li{
-  display: inline-block;
-  list-style: none;
-}
-nav li a{
-  font-size: 18px;
-  text-transform: uppercase;
-  padding:0px 30px;
+body{
+  background: #080808;
   color: white;
-  text-decoration: none;
 }
 
-nav li a:hover{
-  color: rgb(82, 43, 12);
-  transition: all 0.4s ease 0s;
-}
-div.absolute {
-  position: absolute;
-  bottom: 0px;
-  width: 50%;
-  left: 500px;
-
-}
-img.center {
-
-  width: 400px;
-  height: 400px;
-  bottom: 100px;
-  left: 20px;
-  right: 50px;
-
+#header{
+  width: 25%;
+  height: 100vh;
+  left: 100%;
+  background-image: url(Pictures/lofi.jpeg);
+  background-size: cover;
+  background-position: center;
 }
