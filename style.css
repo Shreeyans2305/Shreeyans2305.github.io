@@ -11,10 +11,114 @@ body{
 }
 
 #header{
-  width: 25%;
   height: 100vh;
-  left: 100%;
-  background-image: url(Pictures/lofi.jpeg);
+  background-image: url(Pictures/lofi2.jpeg);
   background-size: cover;
   background-position: center;
+}
+
+.container{
+  padding: 5px 5%;
+
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo{
+  width: 140px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  color: blanchedalmond;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+.header-text{
+  margin-top: 20%;
+  font-size: 30px;
+
+}
+
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+  color: firebrick;
+}
+.header-text h1 span{
+  color: blanchedalmond;
+}
+
+#about{
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1{
+  flex-basis: 35%;
+}
+
+.about-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2{
+  flex-basis: 60%;
+}
+
+.subtitle{
+  font-size: 60px;
+  font-weight: 600;
+  color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+  
+}
+
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  word-spacing: 5px;
 }
