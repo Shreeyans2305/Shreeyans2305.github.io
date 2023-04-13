@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/92761763aa.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -27,6 +29,7 @@
             </div>
         </div>
     </div>
+
     <div id="about">
         <div class="container">
             <div class="row">
@@ -38,10 +41,62 @@
                     <p>PLorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti harum cupiditate eos voluptatum dolores amet reiciendis fugiat doloribus ad. Esse voluptate obcaecati rem rerum dolore maiores, consequatur vitae corporis aspernatur!</p>
 
                     <div class="tab-titles">
-                        <p clsss="tab-links"> Skills </p>
-                        <p clsss="tab-links"> Expirence </p>
-                        <p clsss="tab-links"> Education </p>
+                        <p class="tab-links active-link" onclick="opentab('Skills')"> Skills </p>
+                        <p class="tab-links" onclick="opentab('Expirence')"> Expirence </p>
+                        <p class="tab-links" onclick="opentab('Education')"> Education </p>
                     </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>AI/ML</span><br>Competent is AI/ML Development</li>
+                            <li><span><br>Web Development</span><br>Knowledge of basic HTML and CSS</li>
+                            <li><span><br>Soup making</span><br>Me make good soup</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2008</span><br>I was born</li>
+                            <li><span><br>2020</span><br>I had a spiritual awakening</li>
+                            <li><span><br>2023</span><br>I am on a fast-track to Trillon</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Expirence">
+                        <ul>
+                            <li><span>Book Writing></span><br>I wrote a book</li>
+                            <li><span><br>Song writing</span><br>I wrote a song</li>
+                            <li><span><br>Articles</span><br>I wrote articles broo</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">External Skill Sets</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-music"></i>
+                    <h2>Music</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, qui. Vel porro ipsa velit exercitationem dolores est qui optio dolore.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-chess"></i>
+                    <h2>Chess</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, qui. Vel porro ipsa velit exercitationem dolores est qui optio dolore.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2>Math</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, qui. Vel porro ipsa velit exercitationem dolores est qui optio dolore.</p>
+                    <a href="#">Learn more</a>
                 </div>
             </div>
         </div>
