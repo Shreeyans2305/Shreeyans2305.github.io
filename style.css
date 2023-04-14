@@ -35,7 +35,7 @@ nav{
 
 .logo{
   width: 140px;
-  border-radius: 50%;
+  
 }
 
 nav ul li{
@@ -77,7 +77,8 @@ nav ul li a:hover::after{
 .header-text h1{
   font-size: 60px;
   margin-top: 20px;
-  color: firebrick;
+  color: rgb(141, 16, 16);
+  
 }
 .header-text h1 span{
   color: blanchedalmond;
@@ -86,6 +87,15 @@ nav ul li a:hover::after{
 #about{
   padding: 80px 0;
   color: #ffffff;
+}
+
+#whytri{
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+#contact{
+  padding-top: 80px;
 }
 
 .row{
@@ -107,12 +117,31 @@ nav ul li a:hover::after{
   flex-basis: 60%;
 }
 
+.about-col-2 img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+
 .subtitle{
   font-size: 60px;
   font-weight: 600;
   color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.malo{
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+.lolb{
+  font-weight: bold;
+}
+
 
 .tab-titles{
   display: flex;
@@ -132,7 +161,7 @@ nav ul li a:hover::after{
   content:'';
   width: 0;
   height: 3px;
-  background: red;
+  background: rgb(141, 16, 16);
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -390,6 +419,10 @@ nav .fas{
     z-index: 2;
     transition: right 0.5s;
    }
+
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
 
    nav ul li{
     display: block;
