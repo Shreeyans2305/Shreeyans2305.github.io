@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="Pictures/Trillon3.jpg" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Expirence</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Wonderer/Entrepreneur</p>
@@ -101,5 +103,101 @@
             </div>
         </div>
     </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Pictures/Work3.jpeg">
+                    <div class="layer">
+                        <h3>Artifical Chat Bot</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero mollitia, ipsam similique harum maxime enim pariatur!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Pictures/Work2.jpeg">
+                    <div class="layer">
+                        <h3>Miss My Dog</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero mollitia, ipsam similique harum maxime enim pariatur!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Pictures/Work1.jpeg">
+                    <div class="layer">
+                        <h3>Some Technology BS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero mollitia, ipsam similique harum maxime enim pariatur!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>shreeyans.vichare@gmail.com</p>
+                    <p><i class="fa-solid fa-paper-plane"></i>trillon.melon@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.twitter.com/TrillonMelon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/shreyansvichare/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Shreeyans2305"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Pictures/Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Trillon Melon. Made from scratch</p>
+        </div>
+    </div>
 </body>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwf1izi4mjkIklV2rbxVSnA0LkEllbrHvw_8_Y3s0mHpe2xlC1D9oZofDeXZkmGifJXQg/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg= document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Message Sent! :)"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </html>
