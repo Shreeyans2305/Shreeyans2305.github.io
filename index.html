@@ -1,59 +1,231 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-   <link rel="stylesheet" href="style.css">
-</head>
-<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/92761763aa.js" crossorigin="anonymous"></script>
     <link rel="icon" href="Pictures/Trillon.jpeg">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <img src="Pictures/Trillon.jpeg" alt="Trillon" class="bo">
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Pictures/Trlon5.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Wonderer/Entrepreneur</p>
+                <h1>Hey, I'm <span>Trillon</span> and I have<br> a dream . . .</h1>
+            </div>
         </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Socials</a></li>
-        </ul>
-    </nav>
-</body>
-    <img src="Pictures/lofi.jpeg" alt="Lofi" class="center">
-<body>
-
-</body>
-
-<body>
-    <div class="absolute">
-
-        <h2 class="Socials"> Checkout My Socials!</h2>
-        <a href="https://www.youtube.com/channel/UC_E7uvg3qoo4A1Djx9CDEXw" target="_blank">
-            <img src="Pictures/The_Tube.jpg" alt="youtube" class="yo">
-        </a>
-        
-        <a href="https://medium.com/@trillon.melon" target="_blank">
-            <img src="Pictures/mediumm.png" alt="medium" class="yo">
-        </a>
-        
-        <a href="https://twitter.com/TrillonMelon" target="_blank">
-            <img src="Pictures/Twit_logo_2.png" alt="twitter" class="yo">
-        </a>
-        
-        <a href="https://wattpad.com/Trillon_Melon" target="_blank">
-            <img src="Pictures/Whut.jpg" alt="Wattpad" class="yo">
-        </a>
-        
-        <a href="https://trillonmelon.blogspot.com" target="_blank">
-            <img src="Pictures/Blogger-logo.jpg" alt="Blogger" class="yo">
-        </a>
-        <a href="https://github.com/Shreeyans2305" target="_blank">
-            <img src="Pictures/GitHub-logo.jpg" alt="Github" class="yo">
-        </a>
-
     </div>
 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Pictures/memer3.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p class="malo">
+                        -As a 15-year-old with a passion for knowledge and a desire to make a difference, I am proud to share my diverse range of skills and interests. I have a keen interest in coding, which has been honed through years of study and practice. I am well-versed in Python and use of the language for Data Science, and have a wealth of experience in artificial intelligence and machine learning.<br>
+                        
+                        <br>-Aside from my technical skills, I have a deep appreciation for the arts. I am an accomplished pianist, having studied classical piano for several years. I am also an avid reader and writer, with a particular love for literature. In fact, I am currently in the process of writing my own book, which has been a rewarding and fulfilling endeavor.<br>
+                        
+                        <br>-In addition to my creative pursuits, I am also an expert in chess, having competed in numerous tournaments and achieved many victories. I believe that my skills in chess have taught me valuable lessons about strategy, patience, and perseverance, which I apply to all areas of my life.<br>
+                        
+                        <br>-Finally, I am multilingual, fluent in English, French, Marathi, Hindi, and Sanskrit. This has allowed me to connect with people from different cultures and backgrounds, and has given me a unique perspective on the world.<br>
+                        
+                        <br>-I am excited to continue to learn and grow in all of my endeavors, and I am committed to using my skills to make a positive impact on the world.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')"> Skills </p>
+                        <p class="tab-links" onclick="opentab('Expirence')"> Expirence </p>
+                        <p class="tab-links" onclick="opentab('Education')"> Education </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Coding </span><br>Python, Artificial Intelligence, Machine learning, Data Science, Web development.</li>
+                            <li><span><br>Music</span><br>Competent Piano Playing.</li>
+                            <li><span><br>Writing and literature</span><br>Article, Review, Book (Fiction & Non-fiction) writing.</li>
+                            <li><span><br>Sports</span><br>Chess and Badminton Expertise</li>
+                            <li><span><br>Multilingualism</span><br>Competent at speaking- English, French, Marathi, Sanskrit and Hindi.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021</span><br>Completed online course on Python Development.</li>
+                            <li><span><br>2022</span><br>Completed ML/AI and Data Science course online.</li>
+                            <li><span><br>2022-23</span><br>Completed Web Development online course.</li>
+                            <li><span><br>2023-24</span><br>Completed 10th Grade SSC education.</li>
+                            <li><span><br>2024</span><br>Completed French Basic lebel examination.</li>
+                            <li><span><br>2015-</span><br>Attaining Chess education.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Expirence">
+                        <ul>
+                            <li><span>Book Writing></span><br>I wrote 2 books currently listed on Amazon.</li>
+                            <li><span><br>Machine Learning</span><br>Created a stock prediction algorithm using several aspects of Data Science.</li>
+                            <li><span><br>Articles</span><br>Published Multiple Articles on Medium.</li>
+                            <li><span><br>Chess</span><br>Participated in over 30 chess competitions over the course of 7 years.</li>
+                            <li><span><br>Web Development</span><br>Made this very website from scratch.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">Tangible Academic Skill Sets</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-atom"></i>
+                    <h2>Science</h2>
+                    <p>With a keen interest in physics and a drive to address the world's energy challenges, I am motivated to contribute to the field of renewable energy research. Through my commitment to sustainability and strong foundation in energy systems, I aim to develop innovative solutions that can shape the future of energy. I am also fascinated by the concept of outer space and wish to expand my knowledge in the field.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-book"></i>
+                    <h2>English</h2>
+                    <p>As an individual with a deep appreciation for literature and writing, I possess exceptional skills in written communication. My ability to craft well-written and engaging pieces is evident through my extensive portfolio of published articles, essays, and other written works. My mastery of grammar and syntax further adds to my writing proficiency, allowing me to convey complex ideas with clarity and precision.</p>
+                   <!--  <a href="#">Learn more</a>-->
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2>Mathematics</h2>
+                    <p>My mathematical abilities are a standout aspect of my skill set, as demonstrated by my exceptional aptitude for grasping complex concepts with ease. Throughout my academic journey, I have consistently achieved remarkable results, with a 100% success rate in nearly every examination. My ability to approach problems with an analytical mindset and employ critical thinking has proven to be a valuable asset in tackling challenging mathematical concepts.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work/Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Pictures/Medium_Final.jpeg">
+                    <div class="layer">
+                        <h3>Medium</h3>
+                        <p class="lolb">With a deep intrest in writing articles and exploring the caverns of my imagination, my work in literature can be found on Medium.</p>
+                        <a href="https://medium.com/@trillon.melon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Pictures/Youtube_Final.jpeg">
+                    <div class="layer">
+                        <h3>YouTube</h3>
+                        <p class="lolb">Documenting my life as it passes with lightning speed, the special moments can be found on my YouTube Channel.</p>
+                        <a href="https://www.youtube.com/channel/UCDgevQdD3ZGG7emDy90OtNw"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Pictures/Github_Final.jpeg">
+                    <div class="layer">
+                        <h3>GitHub</h3>
+                        <p class="lolb">Pursiuing and intrest in the developing technologies, my work in code can be found on GitHub.</p>
+                        <a href="https://github.com/Shreeyans2305"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="whytri">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <img src="Pictures/lofi.jpeg">
+                </div>
+                <div class="about-col-1">
+                    <h1 class="subtitle">Why Trillon?</h1>
+                    <p class="malo">If you haven't yet figured out, Trillon Melon is a pseudonym. My actual name is Shreeyans Vichare. You must be wondering why I have been referring to myself as "Trillon", well the explanation is simple. I am a minor and the internet isn't exactly a safe place to put yourself out there. That is why online almost all my user name are associated with Trillon. As far as I am concerned I am Shreeyans Vichare and Trillon Melon is my social identity. :)</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>trillon.melon@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.twitter.com/TrillonMelon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/shreyansvichare/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="goodreads.com/trillonmelon"><i class="fa-brands fa-goodreads"></i></a>
+                    </div>
+                    <a href="Pictures/Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Trillon Melon. Made from scratch <3 </p>
+        </div>
+    </div>
 </body>
 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwf1izi4mjkIklV2rbxVSnA0LkEllbrHvw_8_Y3s0mHpe2xlC1D9oZofDeXZkmGifJXQg/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg= document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Message Sent! :)"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </html>
