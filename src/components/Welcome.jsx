@@ -19,7 +19,7 @@ const renderText = (text,className,baseWeight=400) => {
 
 
 const setupTextHover = (container,type) => {
-    if(!container) return;
+    if(!container) return () => {};
     const letters = container.querySelectorAll("span");
     const {min,max,default:base} = FONT_WEIGHTS[type];
     const animateLetter = (letter,weight,duration=0.25) => {
@@ -66,7 +66,7 @@ const Welcome = () => {
         <section id="welcome">
             <p ref={subtitleRef}>
                 {renderText(
-                    "Hello, Welcome to my portfolio website! I'm",
+                    "Hello, Welcome to my profile page! I'm",
                     "text-3xl font-georama",
                     100,)}
             </p>
