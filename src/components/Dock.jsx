@@ -1,14 +1,36 @@
 import { dockApps } from '#constants';
-import { use, useRef } from 'react';
+import { useRef, useCallback, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react'
 import useWindowStore from '#store/window';
+
+// Check if device supports hover (desktop) vs touch (mobile/tablet)
+const isTouchDevice = () => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(hover: none)').matches;
+};
+
 const Dock = () => {
     const { openWindow, closeWindow, windows } = useWindowStore();
     const dockRef = useRef(null);
+    const [isTouch, setIsTouch] = useState(false);
+
+    // Detect touch device on mount
+    useEffect(() => {
+        setIsTouch(isTouchDevice());
+        
+        const mediaQuery = window.matchMedia('(hover: none)');
+        const handleChange = (e) => setIsTouch(e.matches);
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
+
     useGSAP(() => {
+        // Skip hover animation on touch devices for performance
+        if (isTouch) return;
+
         const dock = dockRef.current;
         if (!dock) return;
         const icons = dock.querySelectorAll('.dock-icon');
@@ -49,7 +71,7 @@ const Dock = () => {
             dock.removeEventListener('mousemove', handleMouseMove);
             dock.removeEventListener('mouseleave', resetIcons);
         };
-    },[]);
+    },[isTouch]);
     
 
     const toggleApp = (app) => {

@@ -10,12 +10,13 @@ const Photos = () => {
     <>
         <div id="window-header">
             <WindowControls target="photos" />
-            <div className="w-full flex justify-end items-center gap-3 text-gray-500">
-                <Mail className="icon" />
-                <Search className="icon" />
+            <h2 className="md:hidden text-center flex-1 font-medium text-gray-700">Gallery</h2>
+            <div className="w-full hidden md:flex justify-end items-center gap-3 text-gray-500">
+                <Mail className="icon" size={18} />
+                <Search className="icon" size={18} />
             </div>
         </div>
-        <div className="flex w-full">
+        <div className="flex w-full h-full">
             <div className="sidebar">
                 <h2>Photos</h2>
                 <ul>
@@ -28,7 +29,7 @@ const Photos = () => {
                 </ul>
             </div>
 
-            <div className="gallery">
+            <div className="gallery flex-1">
                 <ul>
                     {gallery.map(({id,img}) => (
                         <li key={id} onClick={() => 
