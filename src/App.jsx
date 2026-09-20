@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <a href="/portfolio-classic/">Classic Mode →</a>
+    <a href="/classic/">Classic Mode →</a>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
