@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shreeyans2305.github.io</title>
+    <title>Shreeyans Vichare</title>
+    <script>
+      // Temporary redirect to classic portfolio until the new site is ready.
+      // Allows local development (localhost) and preview bypass via '?preview=true'.
+      const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+      const isPreview = window.location.search.includes('preview=true');
+      if (!isLocalhost && !isPreview) {
+        window.location.replace("https://shreeyans2305.github.io/classic/");
+      }
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=https://shreeyans2305.github.io/classic/" />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
